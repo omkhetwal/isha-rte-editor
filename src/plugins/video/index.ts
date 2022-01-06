@@ -44,14 +44,17 @@ export default class Video {
     Object.assign(container.style, containerStyles);
 
     const hlsBox = document.createElement('input');
+    hlsBox.value=this.data.hls;
     hlsBox.placeholder = 'HLS Source';
     this.nodes.hlsInput = hlsBox;
 
     const dashBox = document.createElement('input');
+    dashBox.value=this.data.dash;
     dashBox.placeholder = 'DASH Source';
     this.nodes.dashInput = dashBox;
 
     const youtubeBox = document.createElement('input');
+    youtubeBox.value=this.data.youtube;
     youtubeBox.placeholder = 'YOUTUBE Source';
     this.nodes.youtubeInput = youtubeBox;
 
