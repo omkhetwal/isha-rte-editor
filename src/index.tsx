@@ -4,13 +4,14 @@
 import EditorJS from '@editorjs/editorjs';
 import Embed from '@editorjs/embed';
 import List from '@editorjs/list';
-import SimpleImage from '@editorjs/simple-image';
+
 import Paragraph from 'editorjs-paragraph-with-alignment';
 import ColorPlugin from 'editorjs-text-color-plugin';
 import * as React from 'react';
 import { useCallback, useEffect, useImperativeHandle, useRef } from 'react';
 import fontSizePlugin from './plugins/fontSize';
 import Video from './plugins/video';
+import SimpleImage from './plugins/image';
 import './style.css';
 
 interface IProps {

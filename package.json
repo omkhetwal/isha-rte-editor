@@ -17,14 +17,14 @@
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/react": "^17.0.37",
+    "postcss": "^8.4.4",
     "rollup": "^2.60.2",
     "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.5.2",
-    "postcss": "^8.4.4",
-    "tslib": "^2.3.1"
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
   },
   "peerDependencies": {
     "react": "^17.0.2"
@@ -33,7 +33,6 @@
     "@editorjs/editorjs": "^2.22.2",
     "@editorjs/embed": "^2.5.0",
     "@editorjs/list": "^1.6.2",
-    "@editorjs/simple-image": "^1.4.1",
     "editorjs-inline-font-size-tool": "^1.0.1",
     "editorjs-paragraph-with-alignment": "^3.0.0",
     "editorjs-text-color-plugin": "^1.1.22"
