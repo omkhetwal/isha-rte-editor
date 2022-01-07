@@ -8,8 +8,7 @@ export default class Video {
       hls: '',
       dash: '',
       youtube: '',
-      url:
-        'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     };
     this.nodes = {
       container: null,
@@ -44,17 +43,17 @@ export default class Video {
     Object.assign(container.style, containerStyles);
 
     const hlsBox = document.createElement('input');
-    hlsBox.value=this.data.hls;
+    hlsBox.value = this.data.hls;
     hlsBox.placeholder = 'HLS Source';
     this.nodes.hlsInput = hlsBox;
 
     const dashBox = document.createElement('input');
-    dashBox.value=this.data.dash;
+    dashBox.value = this.data.dash;
     dashBox.placeholder = 'DASH Source';
     this.nodes.dashInput = dashBox;
 
     const youtubeBox = document.createElement('input');
-    youtubeBox.value=this.data.youtube;
+    youtubeBox.value = this.data.youtube;
     youtubeBox.placeholder = 'YOUTUBE Source';
     this.nodes.youtubeInput = youtubeBox;
 
