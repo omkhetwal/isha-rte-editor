@@ -1,13 +1,20 @@
 import './index.css';
 
+interface IData {
+  hls: string;
+  dash: string;
+  youtube: string;
+}
+
 export default class Video {
   data: { hls: string; dash: string; youtube: string };
   nodes: { container: any; hlsInput: any; dashInput: any; youtubeInput: any };
-  constructor() {
+  constructor(props: { data: IData }) {
+    const { data } = props;
     this.data = {
-      hls: '',
-      dash: '',
-      youtube: '',
+      hls: data?.hls ?? '',
+      dash: data?.dash ?? '',
+      youtube: data?.youtube ?? '',
     };
     this.nodes = {
       container: null,
@@ -69,6 +76,7 @@ export default class Video {
     this.data.dash = this.nodes.dashInput.value;
     this.data.hls = this.nodes.hlsInput.value;
     this.data.youtube = this.nodes.youtubeInput.value;
+    console.log(this.data, 'check if it is updating the values 👉');
     return {
       ...this.data,
     };
