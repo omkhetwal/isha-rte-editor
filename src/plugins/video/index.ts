@@ -1,14 +1,13 @@
 import './index.css';
 
 export default class Video {
-  data: { hls: string; dash: string; youtube: string; url: string };
+  data: { hls: string; dash: string; youtube: string };
   nodes: { container: any; hlsInput: any; dashInput: any; youtubeInput: any };
   constructor() {
     this.data = {
       hls: '',
       dash: '',
       youtube: '',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     };
     this.nodes = {
       container: null,
