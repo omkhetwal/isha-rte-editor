@@ -9,7 +9,9 @@ interface IData {
 export default class Video {
   data: { hls: string; dash: string; youtube: string };
   nodes: { container: any; hlsInput: any; dashInput: any; youtubeInput: any };
-  constructor(props: { data: IData }) {
+  props: {};
+  constructor(props: { data: IData; config: any }) {
+    this.props = props;
     const { data } = props;
     this.data = {
       hls: data?.hls ?? '',
@@ -49,19 +51,13 @@ export default class Video {
     Object.assign(container.style, containerStyles);
 
     const hlsBox = document.createElement('input');
-    hlsBox.value = this.data.hls;
     hlsBox.placeholder = 'HLS Source';
-    this.nodes.hlsInput = hlsBox;
 
     const dashBox = document.createElement('input');
-    dashBox.value = this.data.dash;
     dashBox.placeholder = 'DASH Source';
-    this.nodes.dashInput = dashBox;
 
     const youtubeBox = document.createElement('input');
-    youtubeBox.value = this.data.youtube;
     youtubeBox.placeholder = 'YOUTUBE Source';
-    this.nodes.youtubeInput = youtubeBox;
 
     hlsBox.classList.add('url-input');
     dashBox.classList.add('url-input');
@@ -69,6 +65,17 @@ export default class Video {
     container.appendChild(hlsBox);
     container.appendChild(dashBox);
     container.appendChild(youtubeBox);
+
+    localStorage.getItem('enable-rte-logs') &&
+      console.log('data--- ', this.data, this.props);
+    hlsBox.value = this.data.hls;
+    dashBox.value = this.data.dash;
+    youtubeBox.value = this.data.hls;
+
+    this.nodes.hlsInput = hlsBox;
+    this.nodes.dashInput = dashBox;
+    this.nodes.youtubeInput = youtubeBox;
+
     return container;
   }
 
