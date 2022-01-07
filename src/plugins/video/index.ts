@@ -66,8 +66,6 @@ export default class Video {
     container.appendChild(dashBox);
     container.appendChild(youtubeBox);
 
-    localStorage.getItem('enable-rte-logs') &&
-      console.log('data--- ', this.data, this.props);
     hlsBox.value = this.data.hls;
     dashBox.value = this.data.dash;
     youtubeBox.value = this.data.hls;
@@ -83,7 +81,6 @@ export default class Video {
     this.data.dash = this.nodes.dashInput.value;
     this.data.hls = this.nodes.hlsInput.value;
     this.data.youtube = this.nodes.youtubeInput.value;
-    console.log(this.data, 'check if it is updating the values 👉');
     return {
       ...this.data,
     };

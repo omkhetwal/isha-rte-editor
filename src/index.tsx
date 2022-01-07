@@ -117,7 +117,6 @@ const RteEditor = (props: IProps, ref: any) => {
       initEditor();
     }
     return () => {
-      console.log('un mounting');
       // eslint-disable-next-line no-unused-expressions
       if (editorRef?.current) {
         editorRef?.current?.destroy?.();
