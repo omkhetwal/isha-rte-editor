@@ -31,7 +31,7 @@ export default [
 
       resolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({ tsconfig: './tsconfig.json', exclude: ['./src/example'] }),
       postcss(),
 
       // NEW
